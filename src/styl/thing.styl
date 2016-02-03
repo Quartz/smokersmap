@@ -1,0 +1,113 @@
+/*
+ * Config
+ */
+border-radius()
+  -webkit-border-radius: arguments
+  -moz-border-radius: arguments
+  border-radius: arguments
+
+/*
+ * Thing styles
+ */
+#map
+  max-width: 100%
+
+svg
+  background-color: $qz-map-water
+
+.states path
+  stroke: $qz-map-land-stroke
+  stroke-width: 1px
+  fill: $qz-map-land-fill
+
+  &.first
+    fill: #f3ceed
+
+  &.second
+    fill: #f1afe0
+
+  &.third
+    fill: #ed8ed4
+
+  &.fourth
+    fill: #e869c7
+
+  &.fifth
+    fill: #e13dba
+
+.arrows path {
+  stroke-width: 1px;
+  stroke: $qz-body-black;
+  fill: none;
+}
+
+.labels text
+  fill: $qz-gray-3
+  font-family: 'AdelleSans-Regular', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  font-size: 12px
+
+ul#legend
+  padding: 10px 0 0 0
+  list-style-type: none
+  text-align: center
+
+  li
+    display: inline-block
+    margin: 0 18px 0 0
+    padding: 0
+    line-height: 18px
+
+    b
+      display: inline-block
+      width: 16px
+      height: 16px
+      margin-right: 6px
+      float: left
+      border: 1px solid $qz-map-land-stroke
+
+    div
+      whitespace: nowrap
+      fill: $qz-gray-2
+      font-size: 16px
+      font-family: 'AdelleSans-Regular', Helvetica, Arial, sans-serif
+      float: left;
+
+    &.first b
+      background-color: #f3ceed
+
+    &.second b
+      background-color: #f1afe0
+
+    &.third b
+      background-color: #ed8ed4
+
+    &.fourth b
+      background-color: #e869c7
+
+    &.fifth b
+      background-color: #e13dba
+
+div.clear
+  clear: both
+
+/*
+ * Media queries
+ */
+@media screen and (max-width: 600px)
+  ul#legend
+    padding: 5px 0
+    text-align: left
+
+    li
+      line-height: 16px
+
+      b
+        width: 14px
+        height: 14px
+
+      div
+        font-size: 14px
+
+  .states path
+    stroke-width: 0.5px
