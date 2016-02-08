@@ -132,16 +132,14 @@ function renderMap(config) {
 						return '';
 					}
 
-					if (data['smokers_pct'] < 10) {
+					if (data['smokers_pct'] < 14) {
 						return 'first';
-					} else if (data['smokers_pct'] < 15) {
-						return 'second';
 					} else if (data['smokers_pct'] < 20) {
+						return 'second';
+					} else if (data['smokers_pct'] < 26) {
 						return 'third';
-					} else if (data['smokers_pct'] < 25) {
-						return 'fourth';
 					} else {
-						return 'fifth';
+						return 'fourth';
 					}
 
 					return '';
